@@ -1,0 +1,421 @@
+* {
+    @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*********   BODY   ***********/
+
+body {
+    display: grid;
+    background-image: url("/images/fondo.jpg");
+    background-size: cover;
+    background-position: top;
+    grid-template-areas: "header" "main" "section" "footer";
+}
+
+@media (max-width:500px) {
+    body {
+        background: #726868;
+        margin: auto;
+    }
+    .seccion-gifs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: -webkit-center;
+    }
+}
+
+header {
+    background: rgb(238, 237, 237);
+}
+
+@media (min-width: 500px) {}
+
+
+/********* AREAS ***************/
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+section {
+    grid-area: section;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/*******************************/
+
+
+/*********   LOGO   ***********/
+
+.logo {
+    max-width: 5%;
+    max-height: 5%;
+    display: block;
+    margin: auto;
+}
+
+
+/***************************/
+
+
+/******    MENU PRINCIPAL  ******/
+
+.block__menu--principal {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: rgb(0, 72, 93);
+}
+
+.block__menu--principal ul {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.block__menu--principal ul>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fdfdfd;
+    font-size: 18px;
+    font-family: 'Rampart One', cursive;
+    text-decoration: none;
+}
+
+.navegacion ul>li>a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: 0.5s;
+}
+
+.navegacion ul li ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.navegacion ul li:hover>ul {
+    transition: 0.5s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.navegacion ul li ul li ul {
+    display: flex;
+    position: absolute;
+}
+
+.navegacion ul li ul li:hover ul {
+    left: 110px;
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.navegacion ul li ul li {
+    height: 40px;
+    width: 120px;
+    position: relative;
+}
+
+.navegacion ul li ul li a {
+    background: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-size: 14px;
+}
+
+
+/******     GIFS        *******/
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel,
+.carousel-inner>.item>img {
+    height: 100px;
+}
+
+.seccion-gifs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: -webkit-center;
+}
+
+.gift-coctel {
+    border: 3px solid black;
+    display: inline-block;
+    height: 350px;
+    width: 30%;
+    padding: 10px;
+}
+
+
+/***************************/
+
+
+/*****      NAV CATEGORIA     *****/
+
+.selecciona-producto {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    /*border: 2px solid black;*/
+    font-size: 20px;
+    padding: 6px;
+}
+
+ul .producto-categoria {
+    padding-bottom: 8px;
+    color: black;
+}
+
+.producto-categoria:hover {
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.subtitulo-marca {
+    width: 100%;
+    font-family: 'Rampart One', cursive;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    margin-bottom: 12px;
+    background: rgb(36, 43, 107);
+}
+
+
+/**********************************/
+
+
+/********      OFERTAS     ********/
+
+.ofertas {
+    display: flex;
+    align-content: center;
+    padding: 6px;
+    flex-wrap: wrap;
+}
+
+.titulo-ofertas {
+    font-family: 'Rampart One', cursive;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    background-color: rgb(36, 43, 107);
+    border-style: black;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.seccion_oferta {
+    height: 180px;
+    width: 217px;
+}
+
+.seccion_oferta:hover {
+    border: 2px solid rgb(148, 60, 60);
+    margin: 10px;
+    width: 196px;
+    height: 140px;
+}
+
+
+/********************************/
+
+
+/*****        FOOTER         *****/
+
+footer {
+    font-size: 18px;
+}
+
+.encuentranos {
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.redes-footer {
+    width: 2%;
+    height: 2%;
+    padding-left: 10px;
+    text-align: right;
+    color: rgb(14, 5, 5);
+    font-size: 20px;
+    position: relative;
+    left: 68%;
+}
+
+.redes-footer:hover {
+    width: 1.8%;
+    height: 1.8%;
+}
+
+#containter {
+    display: grid;
+    width: 55%;
+    margin: 50px auto;
+    box-shadow: 0 0 20px #333;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-row-gap: 10px;
+    border: 1px solid grey;
+}
+
+.table-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-family: 'Rampart One', cursive;
+    font-style: oblique;
+    color: rgb(124, 33, 17);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.table-header,
+.table-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-item {
+    border: 3px solid black;
+    margin: 6px;
+}
+
+.table-header {
+    background-color: #492121;
+    color: white;
+    border: 1px solid;
+    padding: 6px;
+}
+
+.table-item ul li {
+    margin: auto;
+}
+
+
+/********************************/
+
+
+/*******   TABLAS      *****/
+
+form {
+    align-self: stretch;
+    margin: auto;
+    width: 300px;
+    border: darkred;
+    box-shadow: darkred 13px;
+}
+
+table {
+    border: 3px solid;
+    width: 50%;
+    left: 350px;
+}
+
+th {
+    background-color: #492121;
+    color: white;
+    border: 1px solid;
+}
+
+tr,
+td {
+    border: 1px solid;
+}
+
+
+/*******************************/
+
+
+/***** TITULOS PRINCIPALES *****/
+
+.titulo-principal {
+    font-family: 'Rampart One', cursive;
+    font-style: oblique;
+    text-align: center;
+    color: rgb(124, 33, 17);
+}
+
+.centrar-parrafo {
+    text-align: center;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+
+/*******************************/
+
+
+/******* FORMULARIOS *****/
+
+.form-data {
+    align-self: stretch;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.contactanos-form {
+    text-align: left;
+    box-sizing: content-box;
+    text-align-last: justify;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0em 0.375em 1.125em rgba(0, 0, 0, 0.06);
+}
+
+
+/**********************/
+
+
+/****** GENERAL *******/
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/**********************/
+
+.flex-property {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}

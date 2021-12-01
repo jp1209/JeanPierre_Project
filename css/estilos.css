@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=rampart+one&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url("/images/fondo.jpg");
+  background-size: cover;
+  background-position: top; }
+
+header {
+  background: #eeeded; }
+
+footer {
+  font-size: 18px; }
+
+.header__logo {
+  max-width: 60px;
+  max-height: 60px;
+  display: block;
+  margin: auto; }
+
+.block__menu--principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #00485d;
+  width: 100%; }
+  .block__menu--principal .navbar-toggler {
+    display: hidden;
+    opacity: 0; }
+  .block__menu--principal ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; }
+    .block__menu--principal ul > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: #fdfdfd;
+      font-size: 18px;
+      font-family: "Rampart One", cursive;
+      text-decoration: none; }
+      .block__menu--principal ul > li > a:hover {
+        background-color: white;
+        color: black;
+        transition: 0.5s; }
+    .block__menu--principal ul > li ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1s; }
+      .block__menu--principal ul > li ul li {
+        height: 40px;
+        width: 120px;
+        position: relative; }
+        .block__menu--principal ul > li ul li ul {
+          display: flex;
+          position: absolute; }
+        .block__menu--principal ul > li ul li:hover ul {
+          left: 110px;
+          top: 0;
+          visibility: visible;
+          opacity: 1; }
+        .block__menu--principal ul > li ul li a {
+          background: black;
+          color: white;
+          text-align: center;
+          align-content: center;
+          font-size: 14px; }
+    .block__menu--principal ul > li:hover > ul {
+      transition: 0.5s;
+      visibility: visible;
+      opacity: 1;
+      z-index: 5; }
+  @media (max-width: 768px) {
+    .block__menu--principal {
+      justify-content: flex-end;
+      position: relative; }
+      .block__menu--principal .navbar-toggler {
+        display: block;
+        opacity: 1;
+        border: 1px solid white;
+        background-color: white;
+        height: 57px;
+        width: 57px;
+        margin: 10px; }
+        .block__menu--principal .navbar-toggler:hover {
+          cursor: pointer; }
+          .block__menu--principal .navbar-toggler:hover ~ #menu,
+          .block__menu--principal .navbar-toggler:hover ~ #menu:hover {
+            display: flex;
+            opacity: 1;
+            background: #00485d; }
+      .block__menu--principal #menu {
+        position: absolute;
+        display: none;
+        opacity: 0;
+        z-index: 5;
+        top: 57px;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        height: 500px;
+        min-width: 200px;
+        max-width: 350px; }
+        .block__menu--principal #menu:hover, .block__menu--principal #menu:target, .block__menu--principal #menu:active {
+          display: flex;
+          opacity: 1;
+          background: #00485d; } }
+
+.block__carousel {
+  padding: 20px; }
+  .block__carousel .container {
+    align-content: center;
+    margin: auto; }
+
+.carousel-inner div img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover; }
+
+.seccion-gifs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: -webkit-center; }
+
+.gift-coctel {
+  border: 3px solid black;
+  display: inline-block;
+  height: 350px;
+  width: 30%;
+  padding: 10px; }
+
+.selecciona-producto {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  font-size: 20px;
+  padding: 6px; }
+
+ul {
+  list-style: none; }
+  ul .producto-categoria {
+    padding-bottom: 8px;
+    color: black; }
+
+.producto-categoria:hover {
+  color: #fafafa;
+  font-size: 18px;
+  background-color: black;
+  width: 100%; }
+
+.subtitulo-marca {
+  width: 100%;
+  font-family: "Rampart One", cursive;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  margin-bottom: 12px;
+  background: #242b6b; }
+
+.block__oferts {
+  display: flex;
+  align-content: center;
+  padding: 6px;
+  flex-wrap: wrap; }
+  .block__oferts section .seccion_oferta {
+    height: 180px;
+    width: 217px; }
+    .block__oferts section .seccion_oferta:hover {
+      border: 2px solid #943c3c;
+      margin: 10px;
+      width: 196px;
+      height: 140px; }
+  .block__oferts section h2 {
+    font-family: "Rampart One", cursive;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    background-color: #242b6b;
+    border-style: black;
+    color: white;
+    width: 100%; }
+
+.encuentranos {
+  text-align: center;
+  text-align: -webkit-center; }
+
+.footer__redes {
+  display: flex;
+  justify-content: flex-end; }
+  .footer__redes a {
+    text-align: right;
+    color: #977c7c;
+    font-size: 20px;
+    position: relative; }
+  .footer__redes img {
+    padding-left: 10px;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    object-fit: contain; }
+  .footer__redes a :hover {
+    width: 28px;
+    height: 28px; }
+
+.footer__section {
+  width: 100%; }
+
+#container {
+  display: grid;
+  width: auto;
+  max-width: 500px;
+  min-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px #333;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "title title title" "header1 header2 header3" "item1 item2 item3";
+  grid-row-gap: 10px;
+  border: 1px solid grey; }
+  @media (max-width: 768px) {
+    #container {
+      min-width: 250px;
+      max-width: 450px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "title title" "header1 item1" "header2 item2" "header3 item3"; } }
+  @media (max-width: 461px) {
+    #container {
+      width: 100vw;
+      min-width: 100%;
+      max-width: 100%; } }
+
+.table-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: title;
+  font-family: "Rampart One", cursive;
+  font-style: oblique;
+  color: #7c2111;
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 100%; }
+
+.table-header-1 {
+  grid-area: header1; }
+
+.table-header-2 {
+  grid-area: header2; }
+
+.table-header-3 {
+  grid-area: header3; }
+
+.table-item-1 {
+  grid-area: item1; }
+
+.table-item-2 {
+  grid-area: item2; }
+
+.table-item-3 {
+  grid-area: item3; }
+
+.table-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #492121;
+  color: white;
+  border: 1px solid;
+  padding: 6px; }
+
+.table-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid black;
+  margin: 6px; }
+
+form {
+  align-self: stretch;
+  margin: auto;
+  width: 300px;
+  border: darkred;
+  box-shadow: darkred 13px; }
+
+table {
+  border: 3px solid;
+  width: 50%;
+  left: 350px; }
+
+th {
+  background-color: #492121;
+  color: white;
+  border: 1px solid; }
+
+tr {
+  border: 1px solid; }
+
+td {
+  border: 1px solid; }
+
+.titulo-principal {
+  font-family: "Rampart One", cursive;
+  font-style: oblique;
+  text-align: center;
+  color: #7c2111; }
+
+.centrar-parrafo {
+  text-align: center; }
+
+.centrar-texto {
+  text-align: center; }
+
+.form-data {
+  align-self: stretch;
+  margin: 5px;
+  vertical-align: middle; }
+
+.contactanos-form {
+  text-align: left;
+  box-sizing: content-box;
+  text-align-last: justify;
+  background-color: white;
+  box-shadow: 0em 0.375em 1.125em rgba(0, 0, 0, 0.06); }
+
+ol {
+  list-style: none; }
+
+.flex-property {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px; }
+
+@media (max-width: 500px) {
+  body {
+    background: #726868;
+    margin: auto; }
+  .seccion-gifs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: -webkit-center; } }
